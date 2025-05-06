@@ -3,7 +3,7 @@ export function getAssetPath(relativePath) {
 
   const basePath = isLocal
     ? "/public/assets/"
-    : "/wp-content/reactpress/apps/rabbah-legal/public/assets/";
+    : "/public/assets/";
 
   return `${basePath}${relativePath}`;
 }
