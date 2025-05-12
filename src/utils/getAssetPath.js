@@ -1,9 +1,7 @@
 export function getAssetPath(relativePath) {
 
 
-  const basePath = isLocal
-    ? "/public/assets/"
-    : "/public/assets/";
+  const basePath = "/assets"
 
   return `${basePath}${relativePath}`;
 }
