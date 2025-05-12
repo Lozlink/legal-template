@@ -1,7 +1,7 @@
 export function getAssetPath(relativePath) {
 
 
-  const basePath = "/assets"
+  const basePath = "/assets/"
 
   return `${basePath}${relativePath}`;
 }
