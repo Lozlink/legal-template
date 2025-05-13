@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const ChatbotToggle = () => {
   const [isOpen, setIsOpen] = useState(false);
