@@ -43,9 +43,9 @@ const Hero = () => {
       {location.pathname === "/" && (
         <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-6 lg:px-8 ">
           <div className="text-center max-w-3xl mt-10">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 text-[#141d36]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 text-[#edeef0] font-strong">
               Expert Legal Solutions <br />
-              <span className="text-[#ededf0]">Tailored to Your Needs</span>
+              <span className=" font-strong text-[#ededf0]">Tailored to Your Needs</span>
             </h1>
             <h2 className="text-lg md:text-xl text-[#ededf0] mb-8 max-w-2xl mx-auto font-strong">
               At Legal, we combine decades of experience with personalized
@@ -66,7 +66,7 @@ const Hero = () => {
       {location.pathname === "/about" && (
         <div className="absolute inset-0 z-10 flex flex-col justify-center items-center px-6 lg:px-8">
           <div className="text-center max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-strong leading-tight mb-6 text-[#141d36]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-strong leading-tight mb-6 text-[#edeef0]">
               About Our Firm
             </h1>
             <h3 className="text-xl text-[#ededf0] max-w-3xl mx-auto">
