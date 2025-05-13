@@ -1,6 +1,6 @@
 import { findRelevantSections } from '../lib/legislationSearch'
 
-import OpenAI from 'openai';
+import OpenAI from 'openai';  
 
 
 
