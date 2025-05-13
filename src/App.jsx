@@ -15,7 +15,8 @@ import './App.css'
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import { getAssetPath } from './utils/getAssetPath'
-import {Chatbot, ChatbotToggle} from './Components/Chatbot'
+import ChatBot from './Components/Chatbot'
+import ChatbotToggle from './Components/ChatbotToggle'
 
 
 function App() {
@@ -97,7 +98,7 @@ function App() {
       </Routes>
     </AnimatePresence>
     </div>
-      <Chatbot />
+      <ChatBot />
       <ChatbotToggle />
       <Footer />
     <Analytics /> 
