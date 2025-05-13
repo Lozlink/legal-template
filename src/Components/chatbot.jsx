@@ -1,30 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import { motion, AnimatePresence } from 'framer-motion';
 
-const Chatbot = () => {
-  useEffect(() => {
-    // load script for chatbot
-    const script = document.createElement('script');
-    script.src = 'https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js';
-    script.type = 'module';
-    script.async = true;
-    document.body.appendChild(script);
+const ChatbotToggle = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    // remove it
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  const toggleChatbot = () => setIsOpen(prev => !prev);
 
   return (
-    <div className="fixed bottom-4 right-4 z-[999] transform translate-y-[-10px] translate-x-[-10px]">      
-    <zapier-interfaces-chatbot-embed
-        is-popup="true"
-        chatbot-id="cmalocxub005ygxzjyqy2039z"
-        height="600px"
-        width="400px"
-      ></zapier-interfaces-chatbot-embed>
-    </div>
+    <>
+      {/* Floating Chat Button */}
+      <button
+        onClick={toggleChatbot}
+        className="fixed bottom-6 right-6 z-[1000] bg-[#1413d6] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[141d36] transition md:px-5 md:py-3 text-sm md:text-base"
+      >
+        {isOpen ? 'Close Chat' : 'Chat with Us'}
+      </button>
+
+  
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.3 }}
+            className="fixed bg-[#141d36] bottom-20 right-6 z-[999] w-[90vw] max-w-[400px] shadow-2xl rounded-lg overflow-hidden"
+          >
+            <zapier-interfaces-chatbot-embed
+              is-popup="false"
+              chatbot-id="cmalocxub005ygxzjyqy2039z"
+              height="600px"
+              width="100%"
+            ></zapier-interfaces-chatbot-embed>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 
-export default Chatbot;
+export default ChatbotToggle;
