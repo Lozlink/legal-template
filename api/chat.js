@@ -1,4 +1,5 @@
-import { findRelevantSections } from '../src/utils/legistlationSearch';
+import { findRelevantSections } from '../lib/legislationSearch'
+
 import OpenAI from 'openai';
 
 
