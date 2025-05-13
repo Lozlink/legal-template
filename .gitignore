@@ -25,3 +25,5 @@ backend
 *.sln
 *.sw?
 .vercel
+
+.env.keys
