@@ -9,7 +9,7 @@ const ChatBot = () => {
     const userMessage = { sender: 'user', text: input };
     setMessages([...messages, userMessage]);
 
-    const res = await fetch('/api/chat', {
+    const res = await fetch('api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: input })
